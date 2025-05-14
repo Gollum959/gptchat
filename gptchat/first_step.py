@@ -9,7 +9,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
     raise ValueError("OpenAI API key not found. Please set it in the .env file.")
 
-client = OpenAI(api_key=openai_api_key)
+client = OpenAI()
 
 response = client.responses.create(
     model="gpt-4.1", input="Write a one-sentence bedtime story about a unicorn."
